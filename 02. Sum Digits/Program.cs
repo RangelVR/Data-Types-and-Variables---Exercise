@@ -11,7 +11,7 @@ namespace _02._Sum_Digits
 
             for (int i = 0; i < num.Length; i++)
             {
-                int currDigit = (int)(num[i]) - '0';
+                int currDigit = num[i] - '0';
                 sum += currDigit;
             }
             Console.WriteLine(sum);
