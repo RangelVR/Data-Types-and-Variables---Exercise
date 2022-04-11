@@ -9,7 +9,7 @@ namespace _03._Elevator
             double numOfPeople = double.Parse(Console.ReadLine());
             double capacityOfElevator = double.Parse(Console.ReadLine());
 
-            double courses = (numOfPeople / capacityOfElevator);
+            double courses = Math.Ceiling(numOfPeople / capacityOfElevator);
 
             Console.WriteLine(courses);
         }
