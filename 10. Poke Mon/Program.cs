@@ -9,8 +9,10 @@ namespace _10._Poke_Mon
             int pokePower = int.Parse(Console.ReadLine());
             int distance = int.Parse(Console.ReadLine());
             int exhaustionFactor = int.Parse(Console.ReadLine());
-            int targetsCount = 0;
+            
             double percent = (double)pokePower * 0.50;
+            int targetsCount = 0;
+            
             while (pokePower >= distance)
             {
                 
@@ -23,6 +25,7 @@ namespace _10._Poke_Mon
 
                 targetsCount++;
             }
+            
             Console.WriteLine(pokePower);
             Console.WriteLine(targetsCount);
 
