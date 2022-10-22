@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace _09._Spice_Must_Flow
 {
@@ -6,25 +6,23 @@ namespace _09._Spice_Must_Flow
     {
         static void Main(string[] args)
         {
-            int startingYield = int.Parse(Console.ReadLine());
-            int totalAmount = 0;
-            int days = 0;
+            double yield = double.Parse(Console.ReadLine());
+            double totalSpice = 0;
+            int day = 0;
 
-            while (startingYield >= 100)
+            if (yield >= 100)
             {
-                totalAmount += startingYield;
-                startingYield -= 10;
-                days++;
-                
+                for (double i = yield; i >= 100; i -= 10)
+                {
+                    double spice = i;
+                    spice -= 26;
+                    totalSpice += spice;
+                    day++;
+                }
+                totalSpice -= 26;
             }
-            if (days > 0)
-            {
-                totalAmount -= days * 26;
-                totalAmount -= 26;
-            }
-
-            Console.WriteLine(days);
-            Console.WriteLine(totalAmount);
+            Console.WriteLine(day);
+            Console.WriteLine(totalSpice);
         }
     }
 }
