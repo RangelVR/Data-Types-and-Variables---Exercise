@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace _08._Beer_Kegs
 {
@@ -6,27 +6,25 @@ namespace _08._Beer_Kegs
     {
         static void Main(string[] args)
         {
+            int n = int.Parse(Console.ReadLine());
+            double volumeOfKeg = 0;
+            string bigesstKeg = string.Empty;
 
-            int countOfKegs = int.Parse(Console.ReadLine());
-            double biggestVolumeOfKeg = 0;
-            string biggestKeg = string.Empty;
-
-            for (int i = 0; i < countOfKegs; i++)
+            for (int i = 0; i < n; i++)
             {
-                string typeOfKeg = Console.ReadLine();
-                double radiusOfKeg = double.Parse(Console.ReadLine());
-                double heightOfKeg = double.Parse(Console.ReadLine());
+                string model = Console.ReadLine();
+                double radius = double.Parse(Console.ReadLine());
+                double height = double.Parse(Console.ReadLine());
 
-                //π* r^2 * h.
-                double currVolume = Math.PI * Math.Pow(radiusOfKeg, 2) * heightOfKeg;
-                if (currVolume > biggestVolumeOfKeg)
+                double currVolume = Math.PI * radius * radius * height;
+
+                if (currVolume > volumeOfKeg)
                 {
-                    biggestVolumeOfKeg += currVolume;
-                    biggestKeg = typeOfKeg;
+                    volumeOfKeg = currVolume;
+                    bigesstKeg = model;
                 }
             }
-
-            Console.WriteLine(biggestKeg);
+            Console.WriteLine(bigesstKeg);
         }
     }
 }
