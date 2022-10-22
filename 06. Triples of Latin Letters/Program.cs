@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace _06._Triples_of_Latin_Letters
 {
@@ -7,22 +7,14 @@ namespace _06._Triples_of_Latin_Letters
         static void Main(string[] args)
         {
             int num = int.Parse(Console.ReadLine());
-            string result = string.Empty;
 
-            for (int i = 0; i < num; i++)
+            for (char i = 'a'; i <'a' + num; i++)
             {
-                char firstChar = (char)('a' + i);
-
-                for (int j = 0; j < num; j++)
+                for (char j = 'a'; j <'a' + num; j++)
                 {
-                    char secondChar = (char)('a' + j);
-
-                    for (int k = 0; k < num; k++)
+                    for (char k = 'a'; k <'a' + num; k++)
                     {
-                        char thirdChar = (char)('a' + k);
-                        Console.Write(firstChar);
-                        Console.Write(secondChar);
-                        Console.Write(thirdChar);
+                        Console.Write($"{i}{j}{k}");
                         Console.WriteLine();
                     }
                     
