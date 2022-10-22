@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace _10._Poke_Mon
 {
@@ -8,27 +8,22 @@ namespace _10._Poke_Mon
         {
             int pokePower = int.Parse(Console.ReadLine());
             int distance = int.Parse(Console.ReadLine());
-            int exhaustionFactor = int.Parse(Console.ReadLine());
-            
-            double percent = (double)pokePower * 0.50;
-            int targetsCount = 0;
-            
+            int exhaustFactor = int.Parse(Console.ReadLine());
+
+            double halfOfPower = (double)pokePower * 0.50;
+            int targets = 0;
+
             while (pokePower >= distance)
             {
-                
                 pokePower -= distance;
-
-                if (pokePower == percent && exhaustionFactor != 0)
+                if (pokePower == halfOfPower && exhaustFactor != 0)
                 {
-                    pokePower /= exhaustionFactor;
+                    pokePower /= exhaustFactor;
                 }
-
-                targetsCount++;
+                targets++;
             }
-            
             Console.WriteLine(pokePower);
-            Console.WriteLine(targetsCount);
-
+            Console.WriteLine(targets);
         }
     }
 }
