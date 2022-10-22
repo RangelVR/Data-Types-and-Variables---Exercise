@@ -13,6 +13,15 @@ namespace _05._Print_Part_Of_ASCII_Table
             {
                 Console.Write($"{(char)i} ");
             }
+            
+            //int start = int.Parse(Console.ReadLine());
+            //int stop = int.Parse(Console.ReadLine());
+
+            //for (int i = start; i <= stop; i++)
+            //{
+            //    char ch = (char)i;
+            //    Console.Write(ch + " ");
+            //}
         }
     }
 }
