@@ -14,7 +14,7 @@ namespace _07._Water_Overflow
             {
                 int pouredLitters = int.Parse(Console.ReadLine());
 
-                if ((pouredLitters + littersInTheTank) > tankCapacity)
+                if (pouredLitters + littersInTheTank > tankCapacity)
                 {
                     Console.WriteLine("Insufficient capacity!");
                 }
