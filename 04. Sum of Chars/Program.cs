@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace _04._Sum_of_Chars
 {
@@ -6,16 +6,16 @@ namespace _04._Sum_of_Chars
     {
         static void Main(string[] args)
         {
-            int numOfInputs = int.Parse(Console.ReadLine());
-            int sum = 0;
+            int numCh = int.Parse(Console.ReadLine());
+            int totalSum = 0;
 
-            for (int i = 0; i < numOfInputs; i++)
+            for (int i = 0; i < numCh; i++)
             {
-                char inputLetter = char.Parse(Console.ReadLine());
-                sum += inputLetter;
+                char ch = char.Parse(Console.ReadLine());
+                totalSum += ch;
             }
 
-            Console.WriteLine($"The sum equals: {sum}");
+            Console.WriteLine($"The sum equals: {totalSum}");
         }
     }
 }
