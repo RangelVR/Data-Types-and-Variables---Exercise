@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace _03._Elevator
 {
@@ -6,12 +6,12 @@ namespace _03._Elevator
     {
         static void Main(string[] args)
         {
-            double numOfPeople = double.Parse(Console.ReadLine());
-            double capacityOfElevator = double.Parse(Console.ReadLine());
+            int people = int.Parse(Console.ReadLine());
+            int capacity = int.Parse(Console.ReadLine());
 
-            double courses = Math.Ceiling(numOfPeople / capacityOfElevator);
+            double travelTimes = Math.Ceiling((double)people / capacity);
 
-            Console.WriteLine(courses);
+            Console.WriteLine(travelTimes);
         }
     }
 }
