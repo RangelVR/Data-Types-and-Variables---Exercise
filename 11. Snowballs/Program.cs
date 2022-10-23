@@ -28,9 +28,7 @@ namespace _11._Snowballs
                     theBestSnowballTime = snowballTime;
                     theBestSnowballQuality = snowballQuality;
                 }
-
             }
-
             Console.WriteLine($"{theBestSnowballSnow} : {theBestSnowballTime} = {theBestSnowBallValue} ({theBestSnowballQuality})");
 
             //int n = int.Parse(Console.ReadLine());
