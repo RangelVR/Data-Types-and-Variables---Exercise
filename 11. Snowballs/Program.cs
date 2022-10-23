@@ -31,8 +31,7 @@ namespace _11._Snowballs
 
             }
 
-            Console.WriteLine($"{theBestSnowballSnow} : {theBestSnowballTime} = {theBestSnowBallValue} " +
-                $"({theBestSnowballQuality})");
+            Console.WriteLine($"{theBestSnowballSnow} : {theBestSnowballTime} = {theBestSnowBallValue} ({theBestSnowballQuality})");
 
             //int n = int.Parse(Console.ReadLine());
             //BigInteger maxValue = 0;
