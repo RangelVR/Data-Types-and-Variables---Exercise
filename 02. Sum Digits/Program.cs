@@ -1,20 +1,10 @@
-﻿using System;
+int number = int.Parse(Console.ReadLine());
+int sum = 0;
 
-namespace _02._Sum_Digits
+while (number > 0)
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            string num = Console.ReadLine();
-            int sum = 0;
-
-            for (int i = 0; i < num.Length; i++)
-            {
-                int currDigit = num[i] - '0';
-                sum += currDigit;
-            }
-            Console.WriteLine(sum);
-        }
-    }
+    sum += number % 10;
+    number /= 10;
 }
+
+Console.WriteLine(sum);
