@@ -1,32 +1,39 @@
-﻿using System;
+int n = int.Parse(Console.ReadLine());
+int totalLiters = 0;
+int TANKCAPACITY = 255;
 
-namespace _07._Water_Overflow
+while (n > 0)
 {
-    class Program
+    int liters = int.Parse(Console.ReadLine());
+
+    if (liters + totalLiters <= TANKCAPACITY)
     {
-        static void Main(string[] args)
-        {
-            int count = int.Parse(Console.ReadLine());
-            int tankCapacity = 255;
-            int littersInTheTank = 0;
-
-            for (int i = 0; i < count; i++)
-            {
-                int pouredLitters = int.Parse(Console.ReadLine());
-
-                if (pouredLitters + littersInTheTank > tankCapacity)
-                {
-                    Console.WriteLine("Insufficient capacity!");
-                }
-                else
-                {
-                    littersInTheTank += pouredLitters;
-                }
-                
-            }
-
-            Console.WriteLine(littersInTheTank);
-            
-        }
+        totalLiters += liters;
     }
+    else
+    {
+        Console.WriteLine("Insufficient capacity!");
+    }
+    n--;
 }
+Console.WriteLine(totalLiters);
+
+
+//int n = int.Parse(Console.ReadLine());
+//int totalLiters = 0;
+
+//while (n > 0)
+//{
+//    int liters = int.Parse(Console.ReadLine());
+
+//    if (liters <= 255 - totalLiters)
+//    {
+//        totalLiters += liters;
+//    }
+//    else
+//    {
+//        Console.WriteLine("Insufficient capacity!");
+//    }
+//    n--;
+//}
+//Console.WriteLine(totalLiters);
