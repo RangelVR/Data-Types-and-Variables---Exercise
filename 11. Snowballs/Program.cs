@@ -1,58 +1,23 @@
-﻿using System;
 using System.Numerics;
 
-namespace _11._Snowballs
+int snowballs = int.Parse(Console.ReadLine());
+
+BigInteger bestSnowballValue = 0;
+string bestSnowBall = string.Empty;
+
+for (int i = 0; i < snowballs; i++)
 {
-    class Program
+    int snow = int.Parse(Console.ReadLine());
+    int time = int.Parse(Console.ReadLine());
+    int quality = int.Parse(Console.ReadLine());
+
+    BigInteger currSnowBallValue = BigInteger.Pow(snow / time, quality);
+
+    if (currSnowBallValue > bestSnowballValue)
     {
-        static void Main(string[] args)
-        {
-            int snowballs = int.Parse(Console.ReadLine());
-            BigInteger theBestSnowBallValue = 0;
-            int theBestSnowballSnow = 0;
-            int theBestSnowballTime = 0;
-            int theBestSnowballQuality = 0;
-
-            for (int i = 0; i < snowballs; i++)
-            {
-                int snowballSnow = int.Parse(Console.ReadLine());
-                int snowballTime = int.Parse(Console.ReadLine());
-                int snowballQuality = int.Parse(Console.ReadLine());
-
-                BigInteger snowballValue = BigInteger.Pow(snowballSnow / snowballTime, snowballQuality);
-
-                if (snowballValue > theBestSnowBallValue)
-                {
-                    theBestSnowBallValue = snowballValue;
-                    theBestSnowballSnow = snowballSnow;
-                    theBestSnowballTime = snowballTime;
-                    theBestSnowballQuality = snowballQuality;
-                }
-            }
-            Console.WriteLine($"{theBestSnowballSnow} : {theBestSnowballTime} = {theBestSnowBallValue} ({theBestSnowballQuality})");
-
-            //int n = int.Parse(Console.ReadLine());
-            //BigInteger maxValue = 0;
-            //string bestResult = "";
-
-            //for (int i = 0; i < n; i++)
-            //{
-            //    int snowBalls = int.Parse(Console.ReadLine());
-            //    int snowBallTime = int.Parse(Console.ReadLine());
-            //    int snowBallQuality = int.Parse(Console.ReadLine());
-
-            //    BigInteger value = BigInteger.Pow(snowBalls / snowBallTime, snowBallQuality);
-
-            //    if (value >= maxValue)
-            //    {
-            //        maxValue = value;
-            //        string result = ($"{snowBalls} : {snowBallTime} = {maxValue} ({snowBallQuality})");
-            //        bestResult = result;
-            //    }
-            //}
-
-            //Console.WriteLine(bestResult);
-
-        }
+        bestSnowballValue = currSnowBallValue;
+        bestSnowBall = ($"{snow} : {time} = {bestSnowballValue} ({quality})");
     }
 }
+
+Console.WriteLine(bestSnowBall);
