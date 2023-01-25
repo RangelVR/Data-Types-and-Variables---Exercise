@@ -12,7 +12,7 @@ while (pokePowerN >= distanceM)
     targets++;
 
     if (pokePowerN == exact50 && exhaustionFactorY != 0)
-	{
+    {
         pokePowerN /= exhaustionFactorY;
     }
 }
