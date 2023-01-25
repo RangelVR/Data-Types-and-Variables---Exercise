@@ -1,29 +1,21 @@
-using System;
+int pokePowerN = int.Parse(Console.ReadLine());
+int distanceM = int.Parse(Console.ReadLine());
+int exhaustionFactorY = int.Parse(Console.ReadLine());
 
-namespace _10._Poke_Mon
+double exact50 = pokePowerN * 0.5;
+int targets = 0;
+
+while (pokePowerN >= distanceM)
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            int pokePower = int.Parse(Console.ReadLine());
-            int distance = int.Parse(Console.ReadLine());
-            int exhaustFactor = int.Parse(Console.ReadLine());
 
-            double halfOfPower = (double)pokePower * 0.50;
-            int targets = 0;
+    pokePowerN -= distanceM;
+    targets++;
 
-            while (pokePower >= distance)
-            {
-                pokePower -= distance;
-                if (pokePower == halfOfPower && exhaustFactor != 0)
-                {
-                    pokePower /= exhaustFactor;
-                }
-                targets++;
-            }
-            Console.WriteLine(pokePower);
-            Console.WriteLine(targets);
-        }
+    if (pokePowerN == exact50 && exhaustionFactorY != 0)
+	{
+        pokePowerN /= exhaustionFactorY;
     }
 }
+
+Console.WriteLine(pokePowerN);
+Console.WriteLine(targets);
